@@ -29,9 +29,7 @@ php artisan key:generate
 
 ### 5. Настройка базы данных
 
-#### Вариант 1: Использование Docker
-
-В проекте уже есть готовый файл `docker-compose.yaml`. Запустите базу данных:
+Использование Docker. Запустите контейнер с развернутой базой данных:
 
 ```bash
 docker-compose up -d
@@ -47,15 +45,6 @@ DB_DATABASE=onlyd
 DB_USERNAME=user
 DB_PASSWORD=password
 ```
-
-#### Вариант 2: Локальная установка PostgreSQL
-
-Создайте базу данных PostgreSQL:
-
-```sql
-CREATE DATABASE car_booking;
-```
-
 Выполните миграции:
 
 ```bash
@@ -165,12 +154,3 @@ curl "http://localhost:8000/api/cars?employee_id=1&starts_at=2025-09-02%2009:00:
 curl "http://localhost:8000/api/cars?employee_id=1&starts_at=2025-09-02%2009:00:00&finishes_at=2025-09-02%2017:00:00&comfort_category_id=1,2&car_model_id=1"
 ```
 
-## Управление данными
-
-### Создание сидеров
-
-Для заполнения базы тестовыми данными выполните:
-
-```bash
-php artisan db:seed --class=DatabaseSeeder
-```
