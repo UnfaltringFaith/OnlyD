@@ -12,13 +12,6 @@ use App\Http\Requests\AvailableCarsRequest;
 
 class CarAvailability extends Controller
 {
-    public function test(Request $request)
-    {
-        $emp = Employee::find(1);
-        $emp2 = DB::table("employees")->get();
-
-        return response()->json(['message' => $emp2]);
-    }
     public function index(Request $request)
     {
         $employeeId = $request->query("employee_id");

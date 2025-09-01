@@ -5,5 +5,3 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/cars', [CarAvailability::class, 'index']);
-
-Route::get('/test', [CarAvailability::class, 'test']);
