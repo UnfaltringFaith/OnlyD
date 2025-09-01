@@ -165,12 +165,3 @@ curl "http://localhost:8000/api/cars?employee_id=1&starts_at=2025-09-02%2009:00:
 curl "http://localhost:8000/api/cars?employee_id=1&starts_at=2025-09-02%2009:00:00&finishes_at=2025-09-02%2017:00:00&comfort_category_id=1,2&car_model_id=1"
 ```
 
-## Управление данными
-
-### Создание сидеров
-
-Для заполнения базы тестовыми данными выполните:
-
-```bash
-php artisan db:seed --class=DatabaseSeeder
-```
